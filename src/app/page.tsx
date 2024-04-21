@@ -1,12 +1,13 @@
 import CoverParticles from "@/components/CoverParticles";
+import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
     <main>
-      <div className="flex min-h-[100vh] h-full">
-        <CoverParticles />
-        <p>intro</p>
-      </div>
+        <div className="h-screen">
+          <CoverParticles />
+          <Hero />
+        </div>
 
     </main>
 
