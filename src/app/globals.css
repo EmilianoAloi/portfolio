@@ -17,3 +17,8 @@ main {
     text-wrap: balance;
   }
 }
+
+.bgDark {
+  background-color: #0b0b0b;
+}
+

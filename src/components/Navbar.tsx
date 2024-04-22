@@ -5,7 +5,7 @@ import logo from "../../public/logo.png"
 const Navbar = () => {
     return (
         <header className="flex justify-center">
-            <nav className="fixed z-100  backdrop-blur-4xl flex w-11/12 justify-between items-center py-8  ">
+            <nav className="fixed z-20 flex w-11/12 justify-between items-center py-6   transition duration-500 ease-in-out backdrop-filter backdrop-blur-sm">
 
                 <div className="flex gap-5 w-48">
                     <Image src={logo} alt="logo" width={20}  />
@@ -16,7 +16,7 @@ const Navbar = () => {
                 </div>
 
                 <ul className="flex gap-4 font-semibold">
-                    <li><Link href="/">Inicio</Link></li>
+                    <li><Link href="/">Experiencia</Link></li>
                     <li><Link href="#">Proyectos</Link></li>
                     <li><Link href="#">Sobre Mi</Link></li>
                     <li><Link href="#">Contacto</Link></li>

@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import type { Container, Engine } from "@tsparticles/engine";
-import { loadSlim } from "@tsparticles/slim"; 
+import { loadSlim } from "@tsparticles/slim";
 
 
 const CoverParticles = () => {
@@ -20,7 +20,8 @@ const CoverParticles = () => {
 
 
     return (
-        init && <Particles
+        init &&
+        <Particles
             id="tsparticles"
             options={{
                 background: {
@@ -28,7 +29,14 @@ const CoverParticles = () => {
                     //     value: "#0d47a1",
                     // },
                 },
+                style: {
+                    position: "absolute",
+                },
                 fpsLimit: 120,
+                fullScreen: {
+                    enable: false,
+                    zIndex: 0,
+                },
                 interactivity: {
                     events: {
                         onClick: {
