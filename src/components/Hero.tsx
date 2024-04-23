@@ -12,7 +12,7 @@ const Hero = () => {
                         <h2 className="text-7xl font-semibold bgDark z-10 w-fit">Emiliano Aloi 👋</h2>
                         <h3 className="text-4xl text-zinc-700 bgDark z-10 w-fit">Desarrollador Web</h3>
                         <h3 className="text-zinc-400 text-lg bgDark z-10 w-fit">
-                            +3 años de experiencia creando aplicaciones web con Javascript. <br/> Mi objetivo es ofrecer experiencias digitales que atraigan y logren resultados tangibles.
+                            +2 años de experiencia creando aplicaciones web con Javascript. <br/> Mi objetivo es ofrecer experiencias digitales que atraigan y logren resultados tangibles.
 
                         </h3>
                         <div>

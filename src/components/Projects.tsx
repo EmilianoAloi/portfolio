@@ -9,7 +9,6 @@ import swFrame from "../../public/FrameSW.png"
 import ssLogo from "../../public/ssLogo.png"
 import ssFrame from "../../public/FrameSS.png"
 
-
 const Projects = () => {
     return (
 
@@ -19,27 +18,23 @@ const Projects = () => {
                 <h2 className='text-md text-zinc-500'>A continuación algunos proyectos que muestran lo que puedo aportar.</h2>
             </div>
 
-
             <div className="grid grid-cols-1 grid-rows-4 gap-8 w-full">
-
-            <Link target="_blank" href="https://smart-sell-frontend.vercel.app/report" rel="noopener noreferrer">
-                    <div className='bgCards flex rounded-2xl border-t border-white border-l border-r border-opacity-10 overflow-hidden'>
+                <Link target="_blank" href="https://smart-sell-frontend.vercel.app/report" rel="noopener noreferrer">
+                    <div className='bgCards flex rounded-2xl border-t border-white border-l border-r border-opacity-10 overflow-hidden transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-300'>
                         <div className='flex flex-col  justify-center w-3/5 p-5 '>
                             <Image src={ssLogo} width={120} alt="SmartSell Logo" className="mb-4 z-10" />
                             <h3 className='text-lg font-semibold '>SmartSell</h3>
                             <h4 className='text-sm text-zinc-500 mb-2'>Desarrollo Fullstack</h4>
-                            <h4 className='text-sm text-zinc-500'>Next.js Django Tailwind CSS</h4>
+                            <h4 className='text-sm text-zinc-500'>Next.js Django PostgreSQL Tailwind CSS</h4>
                         </div>
                         <div className=" bg-red-950 pt-12 ps-2 flex justify-center w-full">
-                            <Image src={ssFrame} width={500} alt="Frame SmartSell web" className="bg-white"/>
+                            <Image src={ssFrame} width={500} alt="Frame SmartSell web" className="bg-white" />
                         </div>
                     </div>
-                </Link>     
-
-         
+                </Link>
 
                 <Link target="_blank" href="https://antistampa.netlify.app/" rel="noopener noreferrer">
-                    <div className='bgCards flex rounded-2xl border-t border-white border-l border-r border-opacity-10 overflow-hidden'>
+                    <div className='bgCards flex rounded-2xl border-t border-white border-l border-r border-opacity-10 overflow-hidden transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-300'>
                         <div className='flex flex-col  justify-center w-3/5 p-5 '>
                             <Image src={asLogo} width={50} alt="antistampa Logo" className="mb-4" />
                             <h3 className='text-lg font-semibold '>ANTISTAMPA</h3>
@@ -50,26 +45,25 @@ const Projects = () => {
                             <Image src={asFrame} width={500} alt="Frame antistampa web" />
                         </div>
                     </div>
-                </Link>             
-                
+                </Link>
+
                 <Link target="_blank" href="https://emilianoaloi.github.io/ShowBiz/index.html" rel="noopener noreferrer">
-                    <div className='w-full bgCards flex rounded-2xl border-t border-white border-l border-r border-opacity-10 overflow-hidden'>
+                    <div className='w-full bgCards flex rounded-2xl border-t border-white border-l border-r border-opacity-10 overflow-hidden transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-300'>
                         <div className='flex flex-col  justify-center w-3/5 p-5 '>
                             <Image src={swLogo} width={100} alt="showbiz Logo" className="mb-4" />
                             <h3 className='text-lg font-semibold '>ShowBiz</h3>
                             <h4 className='text-sm text-zinc-500 mb-2'>Desarrollo Frontend</h4>
                             <h4 className='text-sm text-zinc-500'>HTML CSS Javascript</h4>
                         </div>
-
                         <div className="bg-gray-800 pt-12 ps-2 flex justify-center w-full ">
                             <Image src={swFrame} width={500} alt="Frame showbiz web" />
                         </div>
                     </div>
-                </Link>     
-                
+                </Link>
+
 
                 <Link target="_blank" href="https://phonefix.netlify.app/" rel="noopener noreferrer">
-                    <div className='bgCards flex rounded-2xl border-t border-white border-l border-r border-opacity-10 overflow-hidden'>
+                    <div className='bgCards flex rounded-2xl border-t border-white border-l border-r border-opacity-10 overflow-hidden  transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-300'>
                         <div className='flex flex-col  justify-center w-3/5 p-5 '>
                             <Image src={pfLogo} width={50} alt="phoneFix Logo" className="mb-4" />
                             <h3 className='text-lg font-semibold '>phoneFix Belgrano</h3>
@@ -81,15 +75,7 @@ const Projects = () => {
                         </div>
                     </div>
                 </Link>
-
-       
-     
-                
-                    
-
             </div>
-
-
         </section>
     )
 }
