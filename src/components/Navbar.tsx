@@ -4,16 +4,16 @@ import logo from "../../public/logo.png"
 
 const Navbar = () => {
     return (
-        <header className="flex justify-center">
-            <nav className="fixed z-20 flex w-11/12 justify-between items-center py-6   transition duration-500 ease-in-out backdrop-filter backdrop-blur-sm">
+        <header className="flex justify-center ">
+            <nav className="fixed z-20 flex w-full justify-between items-center py-6 px-10 shadow-md  transition duration-500 ease-in-out backdrop-filter backdrop-blur-sm">
 
-                <div className="flex gap-5 w-48">
+                <Link href="/" className="flex gap-5 w-48">
                     <Image src={logo} alt="logo" width={20}  />
                     <div>
                         <h2 className="font-semibold">Emiliano Aloi</h2>
                         <h3 className="text-zinc-500 text-xs">Desarrollador Web</h3>
                     </div>
-                </div>
+                </Link>
 
                 <ul className="flex gap-4 font-semibold">
                     <li><Link href="/">Experiencia</Link></li>
