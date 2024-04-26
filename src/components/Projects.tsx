@@ -12,9 +12,9 @@ import ssFrame from "../../public/FrameSS.png"
 const Projects = () => {
     return (
 
-        <section className='w-full max-w-screen-lg mx-auto flex flex-col'>
+        <section className='w-full max-w-screen-lg mx-auto my-28 flex flex-col'>
             <div className='flex flex-col gap-1 mb-10'>
-                <h2 className='text-4xl font-semibold'>Proyectos</h2>
+                <h2 className='text-5xl font-bold'>Proyectos</h2>
                 <h2 className='text-md text-zinc-500'>A continuación algunos proyectos que muestran lo que puedo aportar.</h2>
             </div>
 
@@ -28,7 +28,7 @@ const Projects = () => {
                             <h4 className='text-sm text-zinc-500'>Next.js Django PostgreSQL Tailwind CSS</h4>
                         </div>
                         <div className=" bg-red-950 pt-12 ps-2 flex justify-center w-full">
-                            <Image src={ssFrame} width={500} alt="Frame SmartSell web" className="bg-white" />
+                            <Image src={ssFrame} width={400} alt="Frame SmartSell web" className="bg-white" />
                         </div>
                     </div>
                 </Link>
@@ -42,7 +42,7 @@ const Projects = () => {
                             <h4 className='text-sm text-zinc-500'>React Node.js Material-UI</h4>
                         </div>
                         <div className=" bg-yellow-800 pt-12 ps-2 flex justify-center w-full">
-                            <Image src={asFrame} width={500} alt="Frame antistampa web" />
+                            <Image src={asFrame} width={400} alt="Frame antistampa web" />
                         </div>
                     </div>
                 </Link>
@@ -56,7 +56,7 @@ const Projects = () => {
                             <h4 className='text-sm text-zinc-500'>HTML CSS Javascript</h4>
                         </div>
                         <div className="bg-gray-800 pt-12 ps-2 flex justify-center w-full ">
-                            <Image src={swFrame} width={500} alt="Frame showbiz web" />
+                            <Image src={swFrame} width={400} alt="Frame showbiz web" />
                         </div>
                     </div>
                 </Link>
@@ -71,7 +71,7 @@ const Projects = () => {
                             <h4 className='text-sm text-zinc-500'>HTML CSS Bootstrap Saas</h4>
                         </div>
                         <div className=" bg-cyan-900 pt-12 ps-2 flex justify-center w-full">
-                            <Image src={pfFrame} width={500} alt="Frame phonefix web" />
+                            <Image src={pfFrame} width={400} alt="Frame phonefix web" />
                         </div>
                     </div>
                 </Link>

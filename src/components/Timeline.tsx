@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image";
+import Link from "next/link";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import 'react-vertical-timeline-component/style.min.css';
 import { MdOutlineWork } from "react-icons/md";
@@ -27,8 +28,8 @@ const Timeline = () => {
                 <p>
                     Creative Direction, User Experience, Visual Design, Project Management, Team Leading
                 </p>
-                <div className="rounded-md overflow-hidden py-8">
-                    <iframe src="https://drive.google.com/file/d/1yBBfMYJRdY21RpHiwFGzFLX3ybp6r8GQ/preview" width="100%" height="480" allow="autoplay"></iframe>
+                <div className="rounded-md overflow-hidden pt-8">
+                    <iframe src="https://drive.google.com/file/d/1yBBfMYJRdY21RpHiwFGzFLX3ybp6r8GQ/preview" width="100%" height="200" allow="autoplay"></iframe>
                 </div>
             </VerticalTimelineElement>
 
@@ -46,8 +47,8 @@ const Timeline = () => {
                 <p>
                     Creative Direction, User Experience, Visual Design, SEO, Online Marketing
                 </p>
-                <div className="rounded-md overflow-hidden py-8">
-                    <iframe src="https://drive.google.com/file/d/11-9kiUCedmMwNjxx5_7RI58AMFBdrdFS/preview" width="100%" height="480" allow="autoplay"></iframe>
+                <div className="rounded-md overflow-hidden pt-8">
+                    <iframe src="https://drive.google.com/file/d/11-9kiUCedmMwNjxx5_7RI58AMFBdrdFS/preview" width="100%" height="200" allow="autoplay"></iframe>
                 </div>
             </VerticalTimelineElement>
 
@@ -65,8 +66,11 @@ const Timeline = () => {
                 <p>
                     User Experience, Visual Design
                 </p>
-                <Image src={coderhouse} width={400} alt="certificado" className="mt-8 rounded" />
-
+                <Link
+                    target="_blank"
+                    href="https://www.coderhouse.com/ar/certificados/648f98ed9f73ad0002cd86ef?lang=es"  >
+                    <Image src={coderhouse} width={400} alt="certificado" className="mt-8 rounded" />
+                </Link>
             </VerticalTimelineElement>
 
         </VerticalTimeline>

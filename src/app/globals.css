@@ -44,3 +44,16 @@ html {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
 
 }
+
+.dev-title {
+  color: #000;
+  opacity: .5;
+  letter-spacing: 6px;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(90deg,#fff 4%,#000 37%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  flex: 0 auto;
+}
+
+

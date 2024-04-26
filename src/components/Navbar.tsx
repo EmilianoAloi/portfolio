@@ -11,7 +11,7 @@ const Navbar = () => {
                     <Image src={logo} alt="logo" width={20}  />
                     <div>
                         <h2 className="font-semibold">Emiliano Aloi</h2>
-                        <h3 className="text-zinc-500 text-xs">Desarrollador Web</h3>
+                        <h3 className="text-zinc-500 text-xs">Desarrollador de Software</h3>
                     </div>
                 </Link>
 
