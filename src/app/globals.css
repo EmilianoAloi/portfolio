@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
+html,
+body {
   color: #fff;
   background-color: #0b0b0b;
 }
@@ -26,6 +27,20 @@ main {
   background-color: #171717;
 }
 
+
+/* Timeline */
+
+html {
+  --line-color: #1DB954
+}
+
 .vertical-timeline-element-date {
   color: #fff;
+}
+
+.vertical-timeline-element-content {
+
+  background-color: #171717 !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
+
 }

@@ -1,55 +1,76 @@
 "use client"
 
-import { VerticalTimeline, VerticalTimelineElement }  from "react-vertical-timeline-component";
+import Image from "next/image";
+import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import 'react-vertical-timeline-component/style.min.css';
 import { MdOutlineWork } from "react-icons/md";
+import { PiStudentFill } from "react-icons/pi";
+import { MdWorkOutline } from "react-icons/md";
+import coderhouse from "../../public/coderhouse.png"
+
+
 const Timeline = () => {
     return (
-        <VerticalTimeline animate={true}  >
+        <VerticalTimeline animate={true} lineColor="">
+
             <VerticalTimelineElement
-                className="vertical-timeline-element--work"
+                className="vertical-timeline-element--work "
                 visible={true}
-                contentStyle={{ background: '', color: '#000' }}
-                contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+                contentStyle={{ background: '', color: '#fff' }}
+                contentArrowStyle={{ borderRight: '7px solid  #171717' }}
                 date="ene. 2024 - abr 2024"
-                iconStyle={{ background: '#1DB954', color: '#fff' }}
-                icon={<MdOutlineWork  />}
+                iconStyle={{ background: '#171717', color: '#fff' }}
+                icon={<MdWorkOutline />}
             >
-                <h3 className="vertical-timeline-element-title">Desarrollador de Software</h3>
-                <h4 className="vertical-timeline-element-subtitle">BlackNexus SPA (Chile)</h4>
+                <h3 className="vertical-timeline-element-title font-semibold text-lg">Desarrollador Fullstack</h3>
+                <h4 className="vertical-timeline-element-subtitle text-zinc-500 ">BlackNexus SPA (CHILE)</h4>
                 <p>
                     Creative Direction, User Experience, Visual Design, Project Management, Team Leading
                 </p>
+                <div className="rounded-md overflow-hidden py-8">
+                    <iframe src="https://drive.google.com/file/d/1yBBfMYJRdY21RpHiwFGzFLX3ybp6r8GQ/preview" width="100%" height="480" allow="autoplay"></iframe>
+                </div>
             </VerticalTimelineElement>
+
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 visible={true}
-                contentStyle={{ background: '', color: '#000' }}
-                contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+                contentStyle={{ background: '', color: '#fff' }}
+                contentArrowStyle={{ borderRight: '7px solid  #171717' }}
                 date="ene. 2023 - dic 2023"
-                iconStyle={{ background: '#1DB954', color: '#fff' }}
-                icon={<MdOutlineWork  />}
+                iconStyle={{ background: '#171717', color: '#fff' }}
+                icon={<MdWorkOutline />}
             >
-                <h3 className="vertical-timeline-element-title">Desarrollador Frontend</h3>
-                <h4 className="vertical-timeline-element-subtitle">Dragones (Arg)</h4>
+                <h3 className="vertical-timeline-element-title font-semibold text-lg">Desarrollador Frontend</h3>
+                <h4 className="vertical-timeline-element-subtitle text-zinc-500 ">Dragones (ARG)</h4>
                 <p>
                     Creative Direction, User Experience, Visual Design, SEO, Online Marketing
                 </p>
+                <div className="rounded-md overflow-hidden py-8">
+                    <iframe src="https://drive.google.com/file/d/11-9kiUCedmMwNjxx5_7RI58AMFBdrdFS/preview" width="100%" height="480" allow="autoplay"></iframe>
+                </div>
             </VerticalTimelineElement>
+
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                date="2008 - 2010"
-                iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                icon={<MdOutlineWork  />}
+                visible={true}
+                contentStyle={{ background: '', color: '#fff' }}
+                contentArrowStyle={{ borderRight: '7px solid  #171717' }}
+                date="abril 2022 - 2023"
+                iconStyle={{ background: '#171717', color: '#fff' }}
+                icon={<PiStudentFill />}
             >
-                <h3 className="vertical-timeline-element-title">Web Designer</h3>
-                <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
+                <h3 className="vertical-timeline-element-title font-semibold">Desarrollador Frontend</h3>
+                <h4 className="vertical-timeline-element-subtitle text-zinc-500 ">Coderhouse</h4>
                 <p>
                     User Experience, Visual Design
                 </p>
+                <Image src={coderhouse} width={400} alt="certificado" className="mt-8 rounded" />
+
             </VerticalTimelineElement>
-            
-        </VerticalTimeline>)
+
+        </VerticalTimeline>
+    )
 }
 
 export default Timeline
