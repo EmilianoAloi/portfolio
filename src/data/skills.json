@@ -2,89 +2,77 @@
     "frontend": [
         {
             "id": 1,
-            "name": "Javascript & Typescript",
-            "iconSrc": "path/to/javascript-icon.png",
-            "description": "Lenguajes de programación para el desarrollo web."
+            "name": "Javascript",
+            "iconSrc": "/stackLogos/react.svg",
+            "description": "Lenguaje"
         },
         {
             "id": 2,
-            "name": "HTML & CSS",
-            "iconSrc": "path/to/html-css-icon.png",
-            "description": "Lenguajes de marcado y estilos para la web."
+            "name": "Typescript",
+            "iconSrc": "/stackLogos/react.svg",
+            "description": "Lenguaje"
         },
         {
             "id": 3,
-            "name": "Tailwind",
-            "iconSrc": "path/to/tailwind-icon.png",
-            "description": "Framework de estilos CSS."
+            "name": "React",
+            "iconSrc": "/stackLogos/react.svg",
+            "description": "Framework"
         },
         {
             "id": 4,
-            "name": "React",
-            "iconSrc": "path/to/react-icon.png",
-            "description": "Biblioteca de JavaScript para construir interfaces de usuario."
+            "name": "Tailwind",
+            "iconSrc": "/stackLogos/react.svg",
+            "description": "Framework"
         },
         {
             "id": 5,
             "name": "Next.js",
-            "iconSrc": "path/to/nextjs-icon.png",
-            "description": "Framework de React para aplicaciones web del lado del servidor y del cliente."
+            "iconSrc": "/stackLogos/react.svg",
+            "description": "Framework"
         },
         {
             "id": 6,
             "name": "Vue.js",
-            "iconSrc": "path/to/vuejs-icon.png",
-            "description": "Framework de JavaScript para construir interfaces de usuario."
-        },
-        {
-            "id": 7,
-            "name": "Storybook",
-            "iconSrc": "path/to/storybook-icon.png",
-            "description": "Herramienta para desarrollar componentes UI de forma aislada."
+            "iconSrc": "/stackLogos/react.svg",
+            "description": "Framework"
         }
     ],
     "backend": [
         {
             "id": 8,
             "name": "Java",
-            "iconSrc": "path/to/java-icon.png",
-            "description": "Lenguaje de programación para aplicaciones empresariales y de servidor."
+            "iconSrc": "/stackLogos/react.svg",
+            "description": "Lenguaje dor."
         },
         {
             "id": 9,
             "name": "Node.js",
-            "iconSrc": "path/to/nodejs-icon.png",
-            "description": "Entorno de ejecución de JavaScript del lado del servidor."
+            "iconSrc": "/stackLogos/react.svg",
+            "description": "Entorno der."
         },
         {
             "id": 10,
             "name": "Express.js",
-            "iconSrc": "path/to/expressjs-icon.png",
-            "description": "Framework de Node.js para construir aplicaciones web y APIs."
+            "iconSrc": "/stackLogos/react.svg",
+            "description": "Framework de Node"
         },
         {
             "id": 11,
             "name": "Rest APIs",
-            "iconSrc": "path/to/rest-api-icon.png",
-            "description": "Interfaz de programación de aplicaciones para sistemas web."
+            "iconSrc": "/stackLogos/react.svg",
+            "description": "Interfaz de as web."
         },
         {
             "id": 12,
             "name": "GraphQL",
-            "iconSrc": "path/to/graphql-icon.png",
-            "description": "Lenguaje de consulta y entorno de ejecución para APIs."
+            "iconSrc": "/stackLogos/react.svg",
+            "description": "Lenguaje ara APIs."
         },
         {
             "id": 13,
             "name": "SQL",
-            "iconSrc": "path/to/sql-icon.png",
-            "description": "Lenguaje de consulta estructurado para la gestión de bases de datos relacionales."
-        },
-        {
-            "id": 14,
-            "name": "Prisma",
-            "iconSrc": "path/to/prisma-icon.png",
-            "description": "ORM para Node.js y TypeScript."
+            "iconSrc": "/stackLogos/react.svg",
+            "description": "Lenguaje relacionales."
         }
     ],
     "tools": [
@@ -111,12 +99,6 @@
             "name": "Docker",
             "iconSrc": "path/to/docker-icon.png",
             "description": "Plataforma para desarrollar, enviar y ejecutar aplicaciones en contenedores."
-        },
-        {
-            "id": 23,
-            "name": "AWS",
-            "iconSrc": "path/to/aws-icon.png",
-            "description": "Plataforma de servicios en la nube ofrecida por Amazon."
         }
     ]
 }
