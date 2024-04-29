@@ -2,33 +2,33 @@
     "frontend": [
         {
             "id": 1,
-            "name": "Javascript",
-            "iconSrc": "/stackLogos/react.svg",
-            "description": "Lenguaje"
+            "name": "Next.js",
+            "iconSrc": "/stackLogos/next.svg",
+            "description": "Framework"
         },
         {
             "id": 2,
-            "name": "Typescript",
-            "iconSrc": "/stackLogos/react.svg",
-            "description": "Lenguaje"
-        },
-        {
-            "id": 3,
             "name": "React",
             "iconSrc": "/stackLogos/react.svg",
             "description": "Framework"
         },
         {
+            "id": 3,
+            "name": "Typescript",
+            "iconSrc": "/stackLogos/typescript.svg",
+            "description": "Lenguaje"
+        },
+        {
             "id": 4,
             "name": "Tailwind",
-            "iconSrc": "/stackLogos/react.svg",
+            "iconSrc": "/stackLogos/tailwind.svg",
             "description": "Framework"
         },
         {
             "id": 5,
-            "name": "Next.js",
-            "iconSrc": "/stackLogos/react.svg",
-            "description": "Framework"
+            "name": "Javascript",
+            "iconSrc": "/stackLogos/javascript.svg",
+            "description": "Lenguaje"
         },
         {
             "id": 6,
@@ -58,9 +58,9 @@
         },
         {
             "id": 11,
-            "name": "Rest APIs",
-            "iconSrc": "/stackLogos/react.svg",
-            "description": "Interfaz de as web."
+            "name": "MongoDB",
+            "iconSrc": "/stackLogos/mongodb.svg",
+            "description": "Base de datos NoSQL"
         },
         {
             "id": 12,
@@ -78,27 +78,27 @@
     "tools": [
         {
             "id": 19,
-            "name": "Redux",
-            "iconSrc": "path/to/redux-icon.png",
-            "description": "Biblioteca para la gestión del estado de la aplicación en aplicaciones JavaScript."
+            "name": "Figma",
+            "iconSrc": "/stackLogos/figma.svg",
+            "description": "Diseño de interfaces"
         },
         {
             "id": 20,
-            "name": "Pinia",
-            "iconSrc": "path/to/pinia-icon.png",
-            "description": "Estado centralizado para Vue 3."
+            "name": "Discord",
+            "iconSrc": "/stackLogos/discord.svg",
+            "description": "Comunicación"
         },
         {
             "id": 21,
-            "name": "Git",
-            "iconSrc": "path/to/git-icon.png",
-            "description": "Sistema de control de versiones distribuido."
+            "name": "VSCode",
+            "iconSrc": "/stackLogos/vscode.svg",
+            "description": "Editor de código"
         },
         {
             "id": 22,
             "name": "Docker",
-            "iconSrc": "path/to/docker-icon.png",
-            "description": "Plataforma para desarrollar, enviar y ejecutar aplicaciones en contenedores."
+            "iconSrc": "/stackLogos/react.svg",
+            "description": "Plataforma para desarrollar"
         }
     ]
 }

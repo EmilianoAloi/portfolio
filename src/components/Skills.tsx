@@ -40,6 +40,7 @@ const Skills = () => {
           </div>
 
         </div>
+
         <div>
           <h3 className="dev-title text-2xl font-semibold mb-10">BACKEND</h3>
           <div className="grid grid-cols-3 font-semibold gap-4">
@@ -49,14 +50,33 @@ const Skills = () => {
                   key={tech.id}
                   className="flex gap-4 items-center p-4 bgCards rounded-2xl border-t border-white border-l border-r border-opacity-10 overflow-hidden">
                   <Image src={tech.iconSrc} width={40} height={40} alt="tech logo" />
-                  <h3>{tech.name}</h3>
-                  <p className="text-zinc-500">{tech.description}</p>
+                  <div>
+                    <h3 className="text-sm">{tech.name}</h3>
+                    <p className="text-sm text-zinc-500">{tech.description}</p>
+                  </div>
                 </div>
               )
             })}
-
           </div>
+        </div>
 
+        <div>
+          <h3 className="dev-title text-2xl font-semibold mb-10">TOOLS</h3>
+          <div className="grid grid-cols-3 font-semibold gap-4">
+            {skills.tools.map((tech: Tech) => {
+              return (
+                <div
+                  key={tech.id}
+                  className="flex gap-4 items-center p-4 bgCards rounded-2xl border-t border-white border-l border-r border-opacity-10 overflow-hidden">
+                  <Image src={tech.iconSrc} width={40} height={40} alt="tech logo" />
+                  <div>
+                    <h3 className="text-sm">{tech.name}</h3>
+                    <p className="text-sm text-zinc-500">{tech.description}</p>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
         </div>
       </div>
     </section>

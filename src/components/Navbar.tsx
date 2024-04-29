@@ -8,7 +8,7 @@ const Navbar = () => {
             <nav className="fixed z-20 flex w-full justify-between items-center py-6 px-10 shadow-md  transition duration-500 ease-in-out backdrop-filter backdrop-blur-sm">
 
                 <Link href="/" className="flex gap-5 w-48">
-                    <Image src={logo} alt="logo" width={20}  />
+                    <Image src={logo} alt="logo" width={18} />
                     <div>
                         <h2 className="font-semibold">Emiliano Aloi</h2>
                         <h3 className="text-zinc-500 text-xs">Desarrollador de Software</h3>
