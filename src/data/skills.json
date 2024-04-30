@@ -4,51 +4,51 @@
             "id": 1,
             "name": "Next.js",
             "iconSrc": "/stackLogos/next.svg",
-            "description": "Framework"
+            "description": "React Framework"
         },
         {
             "id": 2,
             "name": "React",
             "iconSrc": "/stackLogos/react.svg",
-            "description": "Framework"
+            "description": "Biblioteca Javascript"
         },
         {
             "id": 3,
             "name": "Typescript",
             "iconSrc": "/stackLogos/typescript.svg",
-            "description": "Lenguaje"
+            "description": "Lenguaje de programación"
         },
         {
             "id": 4,
             "name": "Tailwind",
             "iconSrc": "/stackLogos/tailwind.svg",
-            "description": "Framework"
+            "description": "CSS Framework"
         },
         {
             "id": 5,
             "name": "Javascript",
             "iconSrc": "/stackLogos/javascript.svg",
-            "description": "Lenguaje"
+            "description": "Lenguaje de programación"
         },
         {
             "id": 6,
             "name": "Vue.js",
-            "iconSrc": "/stackLogos/react.svg",
-            "description": "Framework"
+            "iconSrc": "/stackLogos/vue.svg",
+            "description": "Javascript Framework"
         }
     ],
     "backend": [
         {
             "id": 8,
-            "name": "Java",
-            "iconSrc": "/stackLogos/react.svg",
-            "description": "Lenguaje dor."
+            "name": "Python",
+            "iconSrc": "/stackLogos/python.svg",
+            "description": "Lenguaje de programación"
         },
         {
             "id": 9,
             "name": "Node.js",
-            "iconSrc": "/stackLogos/react.svg",
-            "description": "Entorno der."
+            "iconSrc": "/stackLogos/node.svg",
+            "description": "Entorno de desarrollo"
         },
         {
             "id": 10,
@@ -65,14 +65,14 @@
         {
             "id": 12,
             "name": "GraphQL",
-            "iconSrc": "/stackLogos/react.svg",
-            "description": "Lenguaje ara APIs."
+            "iconSrc": "/stackLogos/graphql.svg",
+            "description": "Lenguaje de consulta para APIs"
         },
         {
             "id": 13,
-            "name": "SQL",
-            "iconSrc": "/stackLogos/react.svg",
-            "description": "Lenguaje relacionales."
+            "name": "PostgreSQL",
+            "iconSrc": "/stackLogos/postgreeSQL.svg",
+            "description": "Base de datos Relacional"
         }
     ],
     "tools": [
@@ -96,9 +96,15 @@
         },
         {
             "id": 22,
-            "name": "Docker",
-            "iconSrc": "/stackLogos/react.svg",
-            "description": "Plataforma para desarrollar"
+            "name": "Git",
+            "iconSrc": "/stackLogos/git.svg",
+            "description": "Control de versiones"
+        },
+        {
+            "id": 23,
+            "name": "Github",
+            "iconSrc": "/stackLogos/github.svg",
+            "description": "Plataforma para alojar proyectos"
         }
     ]
 }
