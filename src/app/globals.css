@@ -67,12 +67,12 @@ html {
 }
 
 input {
-  padding: 0.5rem;
+  padding: 0.8rem;
   border-radius: 2rem;
-  border: 1px solid green;
+  border: 1px solid #000;
+  background-color: #171717;
+  outline: none !important;
+
 }
 
-input:focus {
-  border-color: #48bb78 !important;
-  /* Cambia este color al verde deseado */
-}
+input:focus {}
