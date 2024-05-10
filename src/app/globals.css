@@ -76,4 +76,36 @@ textarea {
 
 }
 
-input:focus {}
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+input[type="checkbox"]+label::before {
+  background-color: #171717;
+  border-radius: 5px;
+  color: transparent;
+  content: "\2713";
+  display: inline-block;
+  height: 26px;
+  line-height: 16px;
+  margin: 10px;
+  text-align: center;
+  width: 26px;
+}
+
+
+input[type="checkbox"]:checked+label::before {
+  border-color: #1db954;
+  color: #1db954;
+  font-size: 2rem;
+}
+
+.form-button {
+  background-color: #1db954;
+  color: #171717;
+}
