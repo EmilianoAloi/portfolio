@@ -1,6 +1,13 @@
 import Link from "next/link"
 import Image from "next/image"
 import logo from "../../public/logo.png"
+import { MuseoModerno } from "next/font/google"
+
+const museoModerno = MuseoModerno({
+    subsets: ["latin"],
+    display: 'swap',
+});
+
 
 const Navbar = () => {
     return (
@@ -10,7 +17,7 @@ const Navbar = () => {
                 <Link href="/" className="flex gap-5 w-48">
                     <Image src={logo} alt="logo" width={18} />
                     <div>
-                        <h2 className="font-semibold">Emiliano Aloi</h2>
+                        <h2 className={`font-semibold ${museoModerno.className}`}>Emiliano Aloi</h2>
                         <h3 className="text-zinc-500 text-xs">Desarrollador de Software</h3>
                     </div>
                 </Link>

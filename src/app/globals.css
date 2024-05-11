@@ -2,10 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 html,
 body {
   color: #fff;
   background-color: #0b0b0b;
+}
+
+
+h1 {
+  font-family: 'MuseoModerno', sans-serif !important;
 }
 
 main {

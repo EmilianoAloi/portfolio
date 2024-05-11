@@ -51,7 +51,8 @@ const Timeline = () => {
                     - Implementé mejoras de performance en las aplicaciones existentes.  <br /><br />
                     - Trabajé estrechamente con el equipo de diseñadores.  <br /><br />
                     - Investigué y propuse la adopción de nuevas tecnologías y frameworks.  <br /><br />
-                    - Participé en reuniones diarias para la planificación y el seguimiento de tareas.                </p>
+                    - Participé en reuniones diarias para la planificación y el seguimiento de tareas.
+                </p>
                 <div className="rounded-md overflow-hidden pt-8">
                     <iframe src="https://drive.google.com/file/d/11-9kiUCedmMwNjxx5_7RI58AMFBdrdFS/preview" width="100%" height="200" allow="autoplay"></iframe>
                 </div>
@@ -69,7 +70,10 @@ const Timeline = () => {
                 <h3 className="vertical-timeline-element-title font-semibold">Desarrollador Frontend</h3>
                 <h4 className="vertical-timeline-element-subtitle text-zinc-500 ">Coderhouse</h4>
                 <p>
-                    User Experience, Visual Design
+                    -  Implementación de componentes funcionales y hooks  <br /><br />
+                    -  HTML5, CSS3, JavaScript (ES6+), herramientas como Webpack, Babel y npm. <br /><br />
+                    - Lógica de programación  <br /><br />
+
                 </p>
                 <Link
                     target="_blank"
