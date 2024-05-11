@@ -41,8 +41,8 @@ const Contact = () => {
                     <label htmlFor="message" className="font-semibold text-xl">¿Me contas sobre tu proyecto / producto / empresa en pocas palabras?</label>
                     <p className="label-required font-semibold text-xs">REQUIRED</p>
                 </div>
-                <div className="flex items-start pt-6 col-span-3 row-span-3 ">
-                    <textarea id="message" rows={10} className="w-full p-4" placeholder=" Escribe tu consulta" />
+                <div className="flex items-start pt-6 col-span-3 row-span-2 ">
+                    <textarea id="message" rows={10} className="w-full p-4" placeholder="Escribe tu consulta" />
                 </div>
 
                 <button className="form-button col-span-5 justify-self-end font-extrabold px-6 py-4 rounded-full">Enviar Mensaje</button>
