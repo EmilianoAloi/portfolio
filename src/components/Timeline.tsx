@@ -4,16 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import 'react-vertical-timeline-component/style.min.css';
-import { MdOutlineWork } from "react-icons/md";
 import { PiStudentFill } from "react-icons/pi";
 import { MdWorkOutline } from "react-icons/md";
 import coderhouse from "../../public/coderhouse.png"
+import { FC } from "react"
 
 
-const Timeline = () => {
+const Timeline: FC = () => {
     return (
         <VerticalTimeline animate={true} lineColor="">
-
             <VerticalTimelineElement
                 className="vertical-timeline-element--work "
                 visible={true}

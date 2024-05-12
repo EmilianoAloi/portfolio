@@ -3,23 +3,34 @@
 import data from "@/data/skills.json"
 import { useState } from "react";
 import Image from "next/image";
+import { FC } from "react"
 
-const Skills = () => {
+interface Tech {
+  id: number;
+  name: string;
+  iconSrc: string;
+  description: string;
+}
 
-  const [skills, setSkills] = useState(data)
+interface SkillsData {
+  frontend: Tech[];
+  backend: Tech[];
+  tools: Tech[];
+}
 
-  interface Tech {
-    id: number;
-    name: string;
-    iconSrc: string;
-    description: string;
-  }
+const Skills: FC = () => {
+
+  const [skills, setSkills] = useState<SkillsData>(data)
+
 
   return (
 
     <section className="w-full max-w-screen-lg mx-auto mb-28 flex flex-col mt-10 ">
       <h2 className='text-5xl font-bold mb-14'>Habilidades </h2>
       <div className="grid grid-cols-1 gap-14">
+
+        {/* Bloque Frontend */}
+
         <div className="gap-10" >
           <h3 className="dev-title text-2xl font-semibold mb-10">FRONTEND</h3>
           <div className="grid grid-cols-3 grid-rows-2 gap-4">
@@ -38,8 +49,9 @@ const Skills = () => {
             })
             }
           </div>
-
         </div>
+
+        {/* Bloque Backend */}
 
         <div>
           <h3 className="dev-title text-2xl font-semibold mb-10">BACKEND</h3>
@@ -59,6 +71,8 @@ const Skills = () => {
             })}
           </div>
         </div>
+
+        {/* Bloque Tools */}
 
         <div>
           <h3 className="dev-title text-2xl font-semibold mb-10">TOOLS</h3>
