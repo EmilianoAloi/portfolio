@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 html,
 body {
   color: #fff;
@@ -34,6 +32,12 @@ main {
   background-color: #171717;
 }
 
+#experience,
+#skills,
+#projects,
+#contact {
+  padding-top: 10rem;
+}
 
 /* Timeline */
 
@@ -115,5 +119,5 @@ input[type="checkbox"]:checked+label::before {
 .form-button {
   background-color: #1db954;
   color: #171717;
-
+  margin-top: -3rem;
 }

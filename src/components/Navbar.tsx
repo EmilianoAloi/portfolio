@@ -5,17 +5,10 @@ import { MuseoModerno } from "next/font/google"
 import { FC } from "react"
 
 
-interface TitleFont {
-    subsets: string[];
-    display: string
-}
-
-
 const museoModerno = MuseoModerno({
     subsets: ["latin"],
     display: 'swap',
 });
-
 
 const Navbar: FC = () => {
     return (
@@ -31,10 +24,10 @@ const Navbar: FC = () => {
                 </Link>
 
                 <ul className="flex gap-4 font-semibold">
-                    <li><Link href="/">Experiencia</Link></li>
-                    <li><Link href="#">Proyectos</Link></li>
-                    <li><Link href="#">Sobre Mi</Link></li>
-                    <li><Link href="#">Contacto</Link></li>
+                    <li><Link href="#experience">Experiencia</Link></li>
+                    <li><Link href="#projects">Proyectos</Link></li>
+                    <li><Link href="#skills">Sobre Mi</Link></li>
+                    <li><Link href="#contact">Contacto</Link></li>
                 </ul>
 
                 <div className="flex gap-4 w-48 justify-end">

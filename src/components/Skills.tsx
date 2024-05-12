@@ -25,7 +25,7 @@ const Skills: FC = () => {
 
   return (
 
-    <section className="w-full max-w-screen-lg mx-auto mb-28 flex flex-col mt-10 ">
+    <section id="skills" className="w-full max-w-screen-lg mx-auto mb-28 flex flex-col mt-10 ">
       <h2 className='text-5xl font-bold mb-14'>Habilidades </h2>
       <div className="grid grid-cols-1 gap-14">
 
