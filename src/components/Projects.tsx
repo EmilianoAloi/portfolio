@@ -38,7 +38,7 @@ const Projects: FC = () => {
                         </div>
                         <div className="bg-gray-900 pt-12 lg:ps-2 flex justify-center w-full">
                             <Image src={clFrame} width={400} alt="Frame SmartSell web" className="hidden lg:flex" />
-                            <Image src={mobileLp} width={300} height={500} alt="compleet labs Logo" className="z-10 lg:hidden" />
+                            <Image src={mobileLp} width={280} height={500} alt="compleet labs Logo" className="px-2 lg:hidden" />
 
                         </div>
                     </div>
@@ -54,7 +54,7 @@ const Projects: FC = () => {
                         </div>
                         <div className=" bg-red-950 pt-12 lg:ps-2 flex justify-center w-full">
                             <Image src={ssFrame} width={400} alt="Frame SmartSell web" className="hidden lg:flex" />
-                            <Image src={mobileSs} width={300} height={300} alt="mobile SmartSell web" className="lg:hidden" />
+                            <Image src={mobileSs} width={280} height={300} alt="mobile SmartSell web" className="lg:hidden" />
                         </div>
                     </div>
                 </Link>
@@ -69,7 +69,7 @@ const Projects: FC = () => {
                         </div>
                         <div className=" bg-yellow-800 pt-12 lg:ps-2 flex justify-center w-full">
                             <Image src={asFrame} width={400} alt="Frame antistampa web" className="hidden lg:flex" />
-                            <Image src={mobileAs} width={300} height={300} alt="mobile antistampa web" className="lg:hidden" />
+                            <Image src={mobileAs} width={280} height={300} alt="mobile antistampa web" className="lg:hidden" />
 
                         </div>
                     </div>
@@ -85,7 +85,7 @@ const Projects: FC = () => {
                         </div>
                         <div className="bg-gray-800 pt-12 lg:ps-2 flex justify-center w-full ">
                             <Image src={swFrame} width={400} alt="Frame showbiz web" className="hidden lg:flex" />
-                            <Image src={mobileSw} width={300} height={400} alt="mobile showbiz web" className="lg:hidden" />
+                            <Image src={mobileSw} width={280} height={400} alt="mobile showbiz web" className="lg:hidden" />
 
                         </div>
                     </div>
@@ -102,7 +102,7 @@ const Projects: FC = () => {
                         </div>
                         <div className=" bg-cyan-900 pt-12 lg:ps-2 flex justify-center w-full">
                             <Image src={pfFrame} width={400} alt="Frame phonefix web" className="hidden lg:flex" />
-                            <Image src={mobilePf} width={300} height={300} alt="mobile phonefix web" className="lg:hidden" />
+                            <Image src={mobilePf} width={280} height={300} alt="mobile phonefix web" className="lg:hidden" />
 
                         </div>
                     </div>
