@@ -2,7 +2,7 @@ import { FC } from "react"
 
 const Contact: FC = () => {
     return (
-        <section id="contact" className="w-full max-w-screen-lg mx-auto flex flex-col gap-1 mb-10">
+        <section id="contact" className="mx-4 w-full lg:max-w-screen-lg lg:mx-auto flex flex-col gap-1 mb-10">
             <div className='flex flex-col gap-1 mb-14'>
                 <h2 className='text-5xl font-bold'>Contacto</h2>
                 <p className='text-md text-zinc-500'>Completá el siguiente formulario y te responderé dentro de las próximas 24 horas.</p>

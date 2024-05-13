@@ -40,7 +40,7 @@ main {
 #skills,
 #projects,
 #contact {
-  padding-top: 10rem;
+  padding-top: 8rem;
 }
 
 /* Timeline */
@@ -124,4 +124,15 @@ input[type="checkbox"]:checked+label::before {
   background-color: #1db954;
   color: #171717;
   margin-top: -3rem;
+}
+
+@media (min-width: 1024) {
+
+  #experience,
+  #skills,
+  #projects,
+  #contact {
+    padding-top: 10rem;
+  }
+
 }

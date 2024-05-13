@@ -14,7 +14,7 @@ import { FC } from "react"
 
 const Projects: FC = () => {
     return (
-        <section id="projects" className='w-full max-w-screen-lg mx-auto my-28 flex flex-col'>
+        <section id="projects" className='mx-4 w-full lg:max-w-screen-lg lg:mx-auto my-28 flex flex-col'>
             <div className='flex flex-col gap-1 mb-10'>
                 <h2 className='text-5xl font-bold'>Proyectos</h2>
                 <h2 className='text-md text-zinc-500'>A continuación algunos proyectos que muestran lo que puedo aportar.</h2>

@@ -4,7 +4,6 @@ import { FC, useState } from "react"
 import Link from "next/link"
 import { usePathname } from 'next/navigation'
 import Image from "next/image"
-import logo from "../../public/logo.png"
 import { MuseoModerno } from "next/font/google"
 import Hamburger from 'hamburger-react'
 import githubLogo from "../../public/socialLogos/github.png"
@@ -22,23 +21,19 @@ const Navbar: FC = () => {
 
     const [isOpen, setIsOpen] = useState(false);
 
-    const toggleNavbar = () => {
-        setIsOpen(!isOpen);
+    const closeNavbar = () => {
+        setIsOpen(false);
     }
 
     return (
         <header className="fixed w-full  py-6 px-10 md:shadow-md z-20 flex justify-center flex-wrap shadow-lg  transition duration-500 ease-in-out backdrop-filter backdrop-blur-md ">
-
             <nav className=" flex w-full justify-between items-center ">
-
                 <Link href="/" className="flex gap-5 w-48">
-                    <Image src={logo} alt="logo" width={18} height={18} />
                     <div>
                         <h2 className={`font-semibold ${museoModerno.className}`}>Emiliano Aloi</h2>
                         <h3 className="text-zinc-500 text-xs">Desarrollador de Software</h3>
                     </div>
                 </Link>
-
                 <div className="hidden lg:flex  ">
                     <ul className="flex  gap-6  font-semibold ">
                         <li><Link href="#experience" className="hover:text-zinc-500">Experiencia</Link></li>
@@ -47,8 +42,6 @@ const Navbar: FC = () => {
                         <li><Link href="#contact" className="hover:text-zinc-500">Contacto</Link></li>
                     </ul>
                 </div>
-
-
                 <ul className="flex gap-4 justify-end items-center hidden lg:flex">
                     <li className="text-green-400 pe-4">Disponible</li>
                     <li className="hidden lg:flex">
@@ -62,7 +55,6 @@ const Navbar: FC = () => {
                         </Link>
                     </li>
                 </ul>
-
                 <div className="lg:hidden">
                     <Hamburger toggled={isOpen} toggle={setIsOpen} />
                 </div>
@@ -70,10 +62,10 @@ const Navbar: FC = () => {
 
             {isOpen ?
                 <ul className="lg:hidden flex flex-col gap-6 font-semibold text-center pt-6">
-                    <li><Link href="#experience" className="hover:text-zinc-500">Experiencia</Link></li>
-                    <li><Link href="#projects" className="hover:text-zinc-500">Proyectos</Link></li>
-                    <li><Link href="#skills" className="hover:text-zinc-500">Habilidades</Link></li>
-                    <li><Link href="#contact" className="hover:text-zinc-500">Contacto</Link></li>
+                    <li><Link href="#experience" className="hover:text-zinc-500" onClick={closeNavbar}>Experiencia</Link></li>
+                    <li><Link href="#projects" className="hover:text-zinc-500" onClick={closeNavbar}>Proyectos</Link></li>
+                    <li><Link href="#skills" className="hover:text-zinc-500" onClick={closeNavbar}>Habilidades</Link></li>
+                    <li><Link href="#contact" className="hover:text-zinc-500" onClick={closeNavbar}>Contacto</Link></li>
                 </ul>
                 : ""
             }
