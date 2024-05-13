@@ -84,7 +84,7 @@ html {
 input,
 textarea {
   padding: 0.8rem;
-  border-radius: 2rem;
+  /* border-radius: 2rem; */
   border: 1px solid #000;
   background-color: #171717;
   outline: none !important;
