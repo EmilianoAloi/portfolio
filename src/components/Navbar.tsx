@@ -26,10 +26,10 @@ const Navbar: FC = () => {
     }
 
     return (
-        <header className="fixed w-full  py-6 px-10 md:shadow-md z-20 flex justify-center flex-wrap shadow-lg  transition duration-500 ease-in-out backdrop-filter backdrop-blur-md ">
+        <header className="fixed w-full px-4 py-6 lg:px-10 md:shadow-md z-20 flex justify-center flex-wrap shadow-lg  transition duration-500 ease-in-out backdrop-filter backdrop-blur-md ">
             <nav className=" flex w-full justify-between items-center ">
                 <Link href="/" className="flex gap-5 w-48">
-                    <div>
+                    <div className="ps-2">
                         <h2 className={`font-semibold ${museoModerno.className}`}>Emiliano Aloi</h2>
                         <h3 className="text-zinc-500 text-xs">Desarrollador de Software</h3>
                     </div>
