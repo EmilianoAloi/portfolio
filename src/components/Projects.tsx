@@ -20,7 +20,7 @@ import mobileSw from "../../public/screenProjects/mobileSW.png"
 
 const Projects: FC = () => {
     return (
-        <section id="projects" className='px-4  w-full lg:max-w-screen-lg lg:mx-auto my-28 flex flex-col'>
+        <section id="projects" className='px-4 w-full lg:max-w-screen-lg lg:mx-auto my-28 flex flex-col'>
             <div className='flex flex-col gap-1 mb-10'>
                 <h2 className='text-4xl lg:text-5xl font-bold'>Proyectos</h2>
             </div>
@@ -29,16 +29,15 @@ const Projects: FC = () => {
 
                 <Link target="_blank" href="https://landing-page-ea.vercel.app" rel="noopener noreferrer">
                     <div className='bgCards flex flex-col lg:flex-row rounded-2xl border-t border-white border-l border-r border-opacity-10 overflow-hidden'>
-                        <div className='flex flex-col  justify-center w-3/5 p-5 '>
+                        <div className='flex flex-col justify-center lg:w-3/5 p-5 '>
                             <Image src={clLogo} width={100} height={150} alt="compleet labs Logo" className="mb-4 z-10 " />
-
                             <h3 className='text-lg font-semibold '>compleet labs</h3>
                             <h4 className='text-sm text-zinc-500 mb-2'>Desarrollo Frontend</h4>
                             <h4 className='text-sm text-zinc-500'>TypeScript React Bootstrap Framer Motion</h4>
                         </div>
                         <div className="bg-gray-900 pt-12 lg:ps-2 flex justify-center w-full">
-                            <Image src={clFrame} width={400} alt="Frame SmartSell web" className="hidden lg:flex" />
-                            <Image src={mobileLp} width={280} height={500} alt="compleet labs Logo" className="px-2 lg:hidden" />
+                            <Image src={clFrame} width={400} height={500} alt="Frame SmartSell web" className="hidden lg:flex" />
+                            <Image src={mobileLp} width={280} height={500} alt="compleet labs Logo" className="px-4 lg:hidden" />
 
                         </div>
                     </div>
@@ -46,7 +45,7 @@ const Projects: FC = () => {
 
                 <Link target="_blank" href="https://smart-sell-frontend.vercel.app/report" rel="noopener noreferrer">
                     <div className='bgCards flex flex-col lg:flex-row rounded-2xl border-t border-white border-l border-r border-opacity-10 overflow-hidden'>
-                        <div className='flex flex-col  justify-center lg:w-3/5 p-5 '>
+                        <div className='flex flex-col justify-center lg:w-3/5 p-5 '>
                             <Image src={ssLogo} width={100} alt="SmartSell Logo" className="mb-4 z-10" />
                             <h3 className='text-lg font-semibold '>SmartSell</h3>
                             <h4 className='text-sm text-zinc-500 mb-2'>Desarrollo Fullstack</h4>
@@ -54,14 +53,14 @@ const Projects: FC = () => {
                         </div>
                         <div className=" bg-red-950 pt-12 lg:ps-2 flex justify-center w-full">
                             <Image src={ssFrame} width={400} alt="Frame SmartSell web" className="hidden lg:flex" />
-                            <Image src={mobileSs} width={280} height={300} alt="mobile SmartSell web" className="lg:hidden" />
+                            <Image src={mobileSs} width={280} height={300} alt="mobile SmartSell web" className="px-4 lg:hidden" />
                         </div>
                     </div>
                 </Link>
 
                 <Link target="_blank" href="https://antistampa.netlify.app/" rel="noopener noreferrer">
                     <div className='bgCards flex flex-col lg:flex-row rounded-2xl border-t border-white border-l border-r border-opacity-10 overflow-hidden'>
-                        <div className='flex flex-col  justify-center w-3/5 p-5 '>
+                        <div className='flex flex-col  justify-center lg:w-3/5 p-5 '>
                             <Image src={asLogo} width={50} alt="antistampa Logo" className="mb-4" />
                             <h3 className='text-lg font-semibold '>ANTISTAMPA</h3>
                             <h4 className='text-sm text-zinc-500 mb-2'>Desarrollo Fullstack</h4>
@@ -69,7 +68,7 @@ const Projects: FC = () => {
                         </div>
                         <div className=" bg-yellow-800 pt-12 lg:ps-2 flex justify-center w-full">
                             <Image src={asFrame} width={400} alt="Frame antistampa web" className="hidden lg:flex" />
-                            <Image src={mobileAs} width={280} height={300} alt="mobile antistampa web" className="lg:hidden" />
+                            <Image src={mobileAs} width={280} height={300} alt="mobile antistampa web" className="px-4 lg:hidden" />
 
                         </div>
                     </div>
@@ -77,7 +76,7 @@ const Projects: FC = () => {
 
                 <Link target="_blank" href="https://emilianoaloi.github.io/ShowBiz/index.html" rel="noopener noreferrer">
                     <div className='w-full bgCards flex flex-col lg:flex-row rounded-2xl border-t border-white border-l border-r border-opacity-10 overflow-hidden'>
-                        <div className='flex flex-col  justify-center w-3/5 p-5 '>
+                        <div className='flex flex-col  justify-center lg:w-3/5 p-5 '>
                             <Image src={swLogo} width={100} alt="showbiz Logo" className="mb-4" />
                             <h3 className='text-lg font-semibold '>ShowBiz</h3>
                             <h4 className='text-sm text-zinc-500 mb-2'>Desarrollo Frontend</h4>
@@ -85,7 +84,7 @@ const Projects: FC = () => {
                         </div>
                         <div className="bg-gray-800 pt-12 lg:ps-2 flex justify-center w-full ">
                             <Image src={swFrame} width={400} alt="Frame showbiz web" className="hidden lg:flex" />
-                            <Image src={mobileSw} width={280} height={400} alt="mobile showbiz web" className="lg:hidden" />
+                            <Image src={mobileSw} width={280} height={400} alt="mobile showbiz web" className="px-4 lg:hidden" />
 
                         </div>
                     </div>
@@ -94,7 +93,7 @@ const Projects: FC = () => {
 
                 <Link target="_blank" href="https://phonefix.netlify.app/" rel="noopener noreferrer">
                     <div className='bgCards flex flex-col lg:flex-row  rounded-2xl border-t border-white border-l border-r border-opacity-10 overflow-hidden '>
-                        <div className='flex flex-col  justify-center w-3/5 p-5 '>
+                        <div className='flex flex-col  justify-center lg:w-3/5 p-5 '>
                             <Image src={pfLogo} width={50} alt="phoneFix Logo" className="mb-4" />
                             <h3 className='text-lg font-semibold '>phoneFix Belgrano</h3>
                             <h4 className='text-sm text-zinc-500 mb-2'>Desarrollo Frontend</h4>
@@ -102,8 +101,7 @@ const Projects: FC = () => {
                         </div>
                         <div className=" bg-cyan-900 pt-12 lg:ps-2 flex justify-center w-full">
                             <Image src={pfFrame} width={400} alt="Frame phonefix web" className="hidden lg:flex" />
-                            <Image src={mobilePf} width={280} height={300} alt="mobile phonefix web" className="lg:hidden" />
-
+                            <Image src={mobilePf} width={280} height={500} alt="mobile phonefix web" className="px-4 lg:hidden" />
                         </div>
                     </div>
                 </Link>
