@@ -8,20 +8,23 @@ body {
   background-color: #0b0b0b;
 }
 
+#experience,
+#skills,
+#projects,
+#contact {
+  padding-top: 6rem;
+}
+
+.green-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #1db954;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #1db954;
+}
 
 h1 {
   font-family: 'MuseoModerno', sans-serif !important;
-}
-
-main {
-  height: 100vh;
-  height: 100dvh;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
 }
 
 .navlink-active {
@@ -36,12 +39,7 @@ main {
   background-color: #171717;
 }
 
-#experience,
-#skills,
-#projects,
-#contact {
-  padding-top: 6rem;
-}
+
 
 /* Timeline */
 
@@ -134,6 +132,4 @@ input[type="checkbox"]:checked+label::before {
   #contact {
     padding-top: 10rem;
   }
-
-
 }
