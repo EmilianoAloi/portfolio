@@ -22,7 +22,7 @@ const Hero: FC = () => {
         <>
             <div><CoverParticles /></div>
             <section className="w-full h-screen lg:max-w-screen-lg mx-auto grid grid-cols-1 grid-rows-1  items-center h-full bgDark ">
-                <div className="container text-center px-4 mx-auto flex flex-col lg:gap-3 justify-end backdrop-blur-4xl backdrop-filter bgDark w-fit">
+                <div className="container text-center px-2 mx-auto flex flex-col lg:gap-3 justify-end backdrop-blur-4xl backdrop-filter bgDark w-fit">
                     {/* <p className="text-5xl lg:text-8xl">🚀</p> */}
 
                     <h2 className={`text-5xl lg:text-8xl font-semibold bgDark z-10 mx-auto pt-32 ${museoModerno.className}`}>Emiliano Aloi </h2>
