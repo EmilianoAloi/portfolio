@@ -84,6 +84,17 @@ const Navbar: FC = () => {
                                 <li><Link href="#projects" className="hover:text-zinc-500" onClick={closeNavbar}>Proyectos</Link></li>
                                 <li><Link href="#skills" className="hover:text-zinc-500" onClick={closeNavbar}>Habilidades</Link></li>
                                 <li><Link href="#contact" className="hover:text-zinc-500" onClick={closeNavbar}>Contacto</Link></li>
+                                <li>
+                                    <div className="flex justify-center gap-2">
+                                        <Link href="https://github.com/EmilianoAloi" target="_blank" rel="noopener noreferrer">
+                                            <Image src={githubLogo} width={20} alt="GitHub Logo" />
+                                        </Link>
+                                        <Link href="https://www.linkedin.com/in/emilianoaloi/" target="_blank" rel="noopener noreferrer">
+                                            <Image src={linkedinLogo} width={20} alt="Linkedin Logo" />
+                                        </Link>
+                                    </div>
+                                </li>
+
                             </ul>
                             : ""
                         }

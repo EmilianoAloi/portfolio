@@ -29,12 +29,6 @@
             "name": "Javascript",
             "iconSrc": "/stackLogos/javascript.svg",
             "description": "Lenguaje de programación"
-        },
-        {
-            "id": 6,
-            "name": "Vue.js",
-            "iconSrc": "/stackLogos/vue.svg",
-            "description": "Javascript Framework"
         }
     ],
     "backend": [

@@ -57,7 +57,7 @@ const Timeline: FC = () => {
                 </div> */}
             </VerticalTimelineElement>
 
-            <VerticalTimelineElement
+            {/* <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 visible={true}
                 contentStyle={{ background: '', color: '#fff' }}
@@ -79,7 +79,7 @@ const Timeline: FC = () => {
                     href="https://www.coderhouse.com/ar/certificados/648f98ed9f73ad0002cd86ef?lang=es"  >
                     <Image src={coderhouse} width={400} alt="certificado" className="mt-8 rounded" />
                 </Link>
-            </VerticalTimelineElement>
+            </VerticalTimelineElement> */}
 
         </VerticalTimeline>
     )

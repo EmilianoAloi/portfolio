@@ -27,13 +27,13 @@ const Skills: FC = () => {
 
     <section id="skills" className="px-4 container mx-auto lg:max-w-screen-lg lg:mx-auto mb-28 flex flex-col mt-10">
       <h2 className='text-4xl lg:text-5xl font-bold  mb-14'>Habilidades </h2>
-      <div className="grid grid-cols-1 grid-rows-3 gap-14 ">
+      <div className="grid lg:grid-cols-1 lg:grid-rows-3 gap-14 ">
 
         {/* Bloque Frontend */}
 
         <div className="" >
           <h3 className="dev-title text-2xl font-semibold mb-10">FRONTEND</h3>
-          <div className="grid grid-cols-1 grid-rows-6 lg:grid-cols-3 lg:grid-rows-2 gap-4 ">
+          <div className="grid grid-cols-1 grid-rows-5 lg:grid-cols-3 lg:grid-rows-2 gap-4 ">
             {skills.frontend.map((tech: Tech) => {
               return (
                 <div

@@ -43,7 +43,7 @@ h1 {
   transform: translateX(-50%);
   cursor: pointer;
   margin: 0 auto;
-  padding-bottom: 2rem;
+  padding-top: 5rem;
   /* color: #1db954; */
 
 }
@@ -138,5 +138,10 @@ input[type="checkbox"]:checked+label::before {
   #projects,
   #contact {
     padding-top: 10rem;
+  }
+
+  .scroll-down-button {
+    padding-top: 10rem !important;
+
   }
 }
