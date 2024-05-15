@@ -29,9 +29,9 @@ const Timeline: FC = () => {
                     - Expandí mi rol desarrollando APIs en el Backend utilizando Django, y PostgreSQL. <br /><br />
                     - Aprendí a trabajar en un entorno de desarrollo colaborativo utilizando Git y Github. <br /><br />
                     - Participé en reuniones diarias para la planificación y el seguimiento de tareas.                </p>
-                <div className="rounded-md overflow-hidden pt-8">
+                {/* <div className="rounded-md overflow-hidden pt-8">
                     <iframe src="https://drive.google.com/file/d/1yBBfMYJRdY21RpHiwFGzFLX3ybp6r8GQ/preview" width="100%" height="200" allow="autoplay"></iframe>
-                </div>
+                </div> */}
             </VerticalTimelineElement>
 
             <VerticalTimelineElement
@@ -52,9 +52,9 @@ const Timeline: FC = () => {
                     - Investigué y propuse la adopción de nuevas tecnologías y frameworks.  <br /><br />
                     - Participé en reuniones diarias para la planificación y el seguimiento de tareas.
                 </p>
-                <div className="rounded-md overflow-hidden pt-8">
+                {/* <div className="rounded-md overflow-hidden pt-8">
                     <iframe src="https://drive.google.com/file/d/11-9kiUCedmMwNjxx5_7RI58AMFBdrdFS/preview" width="100%" height="200" allow="autoplay"></iframe>
-                </div>
+                </div> */}
             </VerticalTimelineElement>
 
             <VerticalTimelineElement

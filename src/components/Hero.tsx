@@ -1,7 +1,8 @@
 import CoverParticles from "./CoverParticles"
 import { MuseoModerno } from "next/font/google"
-import { FC } from "react"
+import { FC, useState } from "react"
 import Link from "next/link"
+import ScrollDownButton from "./ScrollDownButton"
 
 
 interface TitleFont {
@@ -27,13 +28,14 @@ const Hero: FC = () => {
                     <h2 className={`text-5xl lg:text-8xl font-semibold bgDark z-10 mx-auto ${museoModerno.className}`}>Emiliano Aloi </h2>
                     <h3 className="text-2xl lg:text-6xl text-zinc-700 bgDark z-10 pb-2">Desarrollador de Software</h3>
                     <h3 className="text-zinc-400 lg:text-3xl bgDark z-10">
-                        +2 años de experiencia creando aplicaciones web <br />
-                        desde Buenos Aires hacia el Mundo, <br />
-                        atractivas y fáciles de usar.
+                        +2 años de experiencia creando y colaborando <br />
+                        en aplicaciones web atractivas y fáciles de usar.
+
+
+
                     </h3>
                     <div className="flex items-end gap-10 hidden">
                         <Link href={"/"} className="text-md lg:text-xl py-3 ">VER MAS</Link>
-
                         <Link
                             href="/CVEmilianoAloiFullstack.pdf"
                             download="CVEmilianoAloiFullstack"
@@ -42,10 +44,9 @@ const Hero: FC = () => {
                         </Link>
                     </div>
                 </div>
+                <ScrollDownButton />
             </section>
         </>
-
-
     )
 }
 
