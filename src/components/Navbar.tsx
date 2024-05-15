@@ -73,11 +73,10 @@ const Navbar: FC = () => {
                 </nav>
 
                 {isOpen ?
-                    <motion.ul
-                        className="lg:hidden flex flex-col gap-8 font-semibold text-center pt-6"
+                    <ul
+                        className="lg:hidden flex flex-col gap-8 font-semibold text-center pt-6"                    >
+                        <li><Link href="/" className="hover:text-zinc-500" onClick={closeNavbar}>Home</Link></li>
 
-
-                    >
                         <li><Link href="#experience" className="hover:text-zinc-500" onClick={closeNavbar}>Experiencia</Link></li>
                         <li><Link href="#projects" className="hover:text-zinc-500" onClick={closeNavbar}>Proyectos</Link></li>
                         <li><Link href="#skills" className="hover:text-zinc-500" onClick={closeNavbar}>Habilidades</Link></li>
@@ -93,7 +92,7 @@ const Navbar: FC = () => {
                             </div>
                         </li>
 
-                    </motion.ul>
+                    </ul>
                     : ""
                 }
             </header>

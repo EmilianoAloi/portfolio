@@ -1,9 +1,9 @@
 import CoverParticles from "./CoverParticles"
 import { MuseoModerno } from "next/font/google"
-import { FC, useState } from "react"
+import { FC } from "react"
 import Link from "next/link"
 import ScrollDownButton from "./ScrollDownButton"
-
+import { motion } from "framer-motion"
 
 interface TitleFont {
     subsets: string[];
@@ -21,7 +21,11 @@ const Hero: FC = () => {
     return (
         <>
             <div><CoverParticles /></div>
-            <section className="w-full h-screen lg:max-w-screen-lg mx-auto grid grid-cols-1 grid-rows-1  items-center h-full bgDark ">
+            <motion.section
+                whileInView={{ opacity: 1 }}
+                initial={{ opacity: 0 }}
+                transition={{ duration: 1, delay: 1 }}
+                className="w-full h-screen lg:max-w-screen-lg mx-auto grid grid-cols-1 grid-rows-1  items-center h-full bgDark ">
                 <div className="container text-center px-2 mx-auto flex flex-col lg:gap-3 justify-end backdrop-blur-4xl backdrop-filter bgDark w-fit">
                     {/* <p className="text-5xl lg:text-8xl">🚀</p> */}
 
@@ -43,7 +47,7 @@ const Hero: FC = () => {
                     </div>
                 </div>
 
-            </section>
+            </motion.section>
         </>
     )
 }
