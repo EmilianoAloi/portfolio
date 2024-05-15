@@ -1,8 +1,7 @@
 "use client"
 
-import { FC, useState, useEffect } from "react"
+import { FC, useState } from "react"
 import Link from "next/link"
-import { usePathname } from 'next/navigation'
 import Image from "next/image"
 import { MuseoModerno } from "next/font/google"
 import Hamburger from 'hamburger-react'
@@ -23,45 +22,16 @@ const Navbar: FC = () => {
         setIsOpen(false);
     }
 
-    // const pathname = usePathname();
 
     const [isOpen, setIsOpen] = useState(false);
-    // const [isLoading, setIsLoading] = useState(false);
 
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         setIsLoading(false);
-    //     }, 3000);
-    // }, []);
 
-    const variants = {
-        open: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 1,
-                ease: "easeInOut",
-            },
-        },
-        closed: {
-            opacity: 0,
-            y: "-100%",
-            transition: {
-                duration: 1,
-                ease: "easeInOut",
-            },
-        },
-    };
 
     return (
         <>
 
             <header
                 className="fixed w-full px-4 py-6 lg:px-10 md:shadow-md z-20 flex justify-center flex-wrap shadow-lg  transition duration-500 ease-in-out backdrop-filter backdrop-blur-md "
-            // initial="closed"
-            // animate="open"
-            // exit="closed"
-            // variants={variants}
             >
 
                 <nav className=" flex w-full justify-between items-center ">

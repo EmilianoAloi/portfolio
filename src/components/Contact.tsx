@@ -1,9 +1,16 @@
+import { motion } from "framer-motion"
 import { FC } from "react"
 
 const Contact: FC = () => {
     return (
         <>
-            <section id="contact" className="mx-4 w-full lg:max-w-screen-lg lg:mx-auto flex flex-col gap-1 mb-10 hidden lg:flex">
+            <motion.section
+                id="contact"
+                className="mx-4 w-full lg:max-w-screen-lg lg:mx-auto flex flex-col gap-1 mb-10 hidden lg:flex"
+                whileInView={{ opacity: 1 }}
+                initial={{ opacity: 0 }}
+                transition={{ duration: 1, delay: 0.5 }}
+            >
                 <div className='flex flex-col gap-1 mb-14'>
                     <h2 className='text-5xl font-bold'>Contacto</h2>
                     <p className='text-md text-zinc-500'>Completá el siguiente formulario y te responderé dentro de las próximas 24 horas.</p>
@@ -44,7 +51,7 @@ const Contact: FC = () => {
                     </div>
                     <button className="form-button col-span-5 justify-self-end font-extrabold px-6 py-4 rounded-full">Enviar Mensaje</button>
                 </form>
-            </section>
+            </motion.section>
 
 
 
