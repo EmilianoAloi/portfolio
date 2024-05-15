@@ -12,7 +12,7 @@ const ScrollDownButton = () => {
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 1, repeat: Infinity }}
         >
-            <Link href="#experience" className="hover:text-zinc-500">  <FaChevronDown size={50} /> </Link>
+            <FaChevronDown size={50} />
         </motion.div>
     );
 };
