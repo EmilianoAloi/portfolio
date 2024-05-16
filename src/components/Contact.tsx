@@ -1,7 +1,41 @@
 import { motion } from "framer-motion"
-import { FC } from "react"
+import { FC, useRef } from "react"
+import emailjs from '@emailjs/browser';
 
 const Contact: FC = () => {
+
+    const form = useRef<HTMLFormElement>(null);
+
+    const sendEmail = (e: { preventDefault: () => void; }) => {
+        e.preventDefault();
+        const currentForm = form.current;
+        if (currentForm == null) return;
+
+        if (!process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || !process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || !process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY) {
+            console.error("Missing environment variables for emailJS");
+            return;
+
+
+        }
+        emailjs
+            .sendForm(
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+                currentForm,
+                {
+                    publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+                })
+            .then(
+                () => {
+                    console.log('Enviado!');
+                    alert("Enviado")
+                },
+                (error) => {
+                    console.log('Fallo...', error.text);
+                },
+            );
+    };
+
     return (
         <>
             <motion.section
@@ -15,7 +49,7 @@ const Contact: FC = () => {
                     <h2 className='text-5xl font-bold'>Contacto</h2>
                     <p className='text-md text-zinc-500'>Completá el siguiente formulario y te responderé dentro de las próximas 24 horas.</p>
                 </div>
-                <form action="" className="grid grid-flow-row-dense grid-cols-5 grid-rows-13 gap-20">
+                <form ref={form} onSubmit={sendEmail} className="grid grid-flow-row-dense grid-cols-5 grid-rows-13 gap-20">
                     {/* Name */}
                     <div className="flex flex-col col-span-2 gap-1">
                         <p className="flex items-center justify-center text-zinc-500 w-5 h-5 text-xs font-bold border-solid border-2 border-zinc-500 rounded-full ">
@@ -25,7 +59,7 @@ const Contact: FC = () => {
                         <p className="label-required font-semibold text-xs">REQUIRED</p>
                     </div>
                     <div className="flex items-end col-span-3 ">
-                        <input type="text" id="name" className="w-full px-6" placeholder="Escribe tu nombre completo" />
+                        <input type="text" id="name" name="user_name" className="w-full px-6" placeholder="Escribe tu nombre completo" />
                     </div>
                     {/* Email */}
                     <div className="flex flex-col col-span-2 gap-1">
@@ -36,7 +70,7 @@ const Contact: FC = () => {
                         <p className="label-required font-semibold text-xs">REQUIRED</p>
                     </div>
                     <div className="flex items-end col-span-3 ">
-                        <input type="text" id="email" className="w-full px-6" placeholder="ejemplo@gmail.com" />
+                        <input type="text" id="email" name="user_email" className="w-full px-6" placeholder="ejemplo@gmail.com" />
                     </div>
                     {/* TextArea */}
                     <div className="flex flex-col col-span-2 row-span-2 gap-1">
@@ -47,7 +81,7 @@ const Contact: FC = () => {
                         <p className="label-required font-semibold text-xs">REQUIRED</p>
                     </div>
                     <div className="flex items-start pt-6 col-span-3 row-span-2 ">
-                        <textarea id="message" rows={10} className="w-full p-4" placeholder="Escribe tu consulta" />
+                        <textarea id="message" rows={10} name="user_message" className="w-full p-4" placeholder="Escribe tu consulta" />
                     </div>
                     <button className="form-button col-span-5 justify-self-end font-extrabold px-6 py-4 rounded-full">Enviar Mensaje</button>
                 </form>
@@ -101,7 +135,7 @@ const Contact: FC = () => {
                     </div>
 
                     <div className="mt-10 text-end">
-                        <button className="form-button font-extrabold text-sm px-6 py-3 rounded-full ">Enviar Mensaje</button>
+                        <button type="submit" className="form-button font-extrabold text-sm px-6 py-3 rounded-full ">Enviar Mensaje</button>
                     </div>
                 </form>
 
