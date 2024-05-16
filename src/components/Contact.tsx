@@ -1,6 +1,7 @@
 import { motion } from "framer-motion"
 import { FC, useRef } from "react"
 import emailjs from '@emailjs/browser';
+import { Toaster, toast } from 'sonner'
 
 const Contact: FC = () => {
 
@@ -9,14 +10,16 @@ const Contact: FC = () => {
     const sendEmail = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
         const currentForm = form.current;
+
         if (currentForm == null) return;
 
-        if (!process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || !process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || !process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY) {
+        if (!process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ||
+            !process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ||
+            !process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY) {
             console.error("Missing environment variables for emailJS");
             return;
-
-
         }
+
         emailjs
             .sendForm(
                 process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
@@ -28,10 +31,11 @@ const Contact: FC = () => {
             .then(
                 () => {
                     console.log('Enviado!');
-                    alert("Enviado")
+                    toast.success('Mensaje enviado con éxito! ');
                 },
                 (error) => {
                     console.log('Fallo...', error.text);
+                    toast.error('Algo ha fallado, intente de nuevo. ');
                 },
             );
     };
@@ -96,7 +100,7 @@ const Contact: FC = () => {
                     <h2 className='text-4xl lg:text-5xl font-bold'>Contacto</h2>
                 </div>
 
-                <form action="" className="flex flex-col ">
+                <form className="flex flex-col ">
 
                     {/* Name */}
                     <div className="flex w-full flex-col gap-1 mb-2">
@@ -107,7 +111,7 @@ const Contact: FC = () => {
                         <p className="label-required font-semibold text-xs">REQUIRED</p>
                     </div>
                     <div className="flex items-end mb-10">
-                        <input type="text" id="name" className="w-full px-4 text-xs" placeholder="Escribe tu nombre completo" />
+                        <input type="text" id="name" name="user_name" className="w-full px-4 text-xs" placeholder="Escribe tu nombre completo" />
                     </div>
 
                     {/* Email */}
@@ -119,7 +123,7 @@ const Contact: FC = () => {
                         <p className="label-required font-semibold text-xs">REQUIRED</p>
                     </div>
                     <div className="flex items-end mb-10">
-                        <input type="text" id="email" className="w-full px-6 text-xs" placeholder="ejemplo@gmail.com" />
+                        <input type="text" id="email" name="user_email" className="w-full px-6 text-xs" placeholder="ejemplo@gmail.com" />
                     </div>
 
                     {/* TextArea */}
@@ -131,16 +135,15 @@ const Contact: FC = () => {
                         <p className="label-required font-semibold text-xs">REQUIRED</p>
                     </div>
                     <div className="">
-                        <textarea id="message" rows={8} className="w-full p-4 text-xs" placeholder="Escribe tu consulta" />
+                        <textarea id="message" rows={8} name="user_message" className="w-full p-4 text-xs" placeholder="Escribe tu consulta" />
                     </div>
 
                     <div className="mt-10 text-end">
-                        <button type="submit" className="form-button font-extrabold text-sm px-6 py-3 rounded-full ">Enviar Mensaje</button>
+                        <button onClick={sendEmail} className="form-button font-extrabold text-sm px-6 py-3 rounded-full ">Enviar Mensaje</button>
                     </div>
                 </form>
-
             </section>
-
+            <Toaster position="top-right" richColors />
         </>
     )
 }
