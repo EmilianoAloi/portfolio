@@ -5,23 +5,24 @@ import { Toaster, toast } from 'sonner'
 
 const Contact: FC = () => {
 
-    const form = useRef<HTMLFormElement>(null);
+    const formDesktop = useRef<HTMLFormElement>(null);
+    const formMobile = useRef<HTMLFormElement>(null);
 
-    const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    // const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    //     e.preventDefault();
+    //     sendEmail(e as unknown as React.FormEvent<HTMLFormElement>);
+    // };
+
+
+    const sendEmailDesktop = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        sendEmail(e as unknown as React.FormEvent<HTMLFormElement>);
-    };
-
-
-    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        const currentForm = form.current;
+        const currentForm = formDesktop.current;
         const formData = new FormData(e.currentTarget);
 
         // Validar los campos del formulario
-        const name = formData.get('user_name') as string;
-        const email = formData.get('user_email') as string;
-        const message = formData.get('user_message') as string;
+        let name = formData.get('user_name') as string;
+        let email = formData.get('user_email') as string;
+        let message = formData.get('user_message') as string;
 
         // Validación del formato de correo electrónico 
         const isValidEmail = (email: string) => {
@@ -71,6 +72,65 @@ const Contact: FC = () => {
             );
     };
 
+    const sendEmailMobile = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        const currentForm = formMobile.current;
+        const formData = new FormData(e.currentTarget);
+
+        // Validar los campos del formulario
+        let name = formData.get('user_name') as string;
+        let email = formData.get('user_email') as string;
+        let message = formData.get('user_message') as string;
+
+        // Validación del formato de correo electrónico 
+        const isValidEmail = (email: string) => {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        };
+
+        // Mostrar mensaje de error si hay campos vacíos
+        if (!name || !email || !message) {
+            toast.error('Por favor completa todos los campos.');
+            return;
+        }
+
+        // Mostrar mensaje de error si el formato del correo electrónico es inválido
+        if (!isValidEmail(email)) {
+            toast.error('Por favor ingresa un correo electrónico válido.');
+            return;
+        }
+
+        if (currentForm == null) return;
+
+        if (!process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ||
+            !process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ||
+            !process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY) {
+            console.error("Missing environment variables for emailJS");
+            return;
+        }
+
+        emailjs
+            .sendForm(
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+                currentForm,
+                {
+                    publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+                })
+            .then(
+                () => {
+                    console.log('Enviado!');
+                    toast.success('Mensaje enviado con éxito! ');
+                    currentForm.reset();
+                },
+                (error) => {
+                    console.log('Fallo...', error.text);
+                    toast.error('Algo ha fallado, intente de nuevo. ');
+                },
+            );
+    };
+
+
     return (
         <>
             <motion.section
@@ -84,7 +144,7 @@ const Contact: FC = () => {
                     <h2 className='text-5xl font-bold'>Contacto</h2>
                     <p className='text-md text-zinc-500'>Completá el siguiente formulario y te responderé dentro de las próximas 24 horas.</p>
                 </div>
-                <form ref={form} onSubmit={sendEmail} className="grid grid-flow-row-dense grid-cols-5 grid-rows-13 gap-20">
+                <form ref={formDesktop} onSubmit={sendEmailDesktop} className="grid grid-flow-row-dense grid-cols-5 grid-rows-13 gap-20">
                     {/* Name */}
                     <div className="flex flex-col col-span-2 gap-1">
                         <p className="flex items-center justify-center text-zinc-500 w-5 h-5 text-xs font-bold border-solid border-2 border-zinc-500 rounded-full ">
@@ -137,7 +197,7 @@ const Contact: FC = () => {
                     <h2 className='text-4xl lg:text-5xl font-bold'>Contacto</h2>
                 </div>
 
-                <form ref={form} onSubmit={sendEmail} className="flex flex-col">
+                <form ref={formMobile} onSubmit={sendEmailMobile} className="flex flex-col">
 
                     {/* Name */}
                     <div className="flex w-full flex-col gap-1 mb-2">
