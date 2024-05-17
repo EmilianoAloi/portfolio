@@ -7,9 +7,39 @@ const Contact: FC = () => {
 
     const form = useRef<HTMLFormElement>(null);
 
-    const sendEmail = (e: { preventDefault: () => void; }) => {
+    const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+        sendEmail(e as unknown as React.FormEvent<HTMLFormElement>);
+    };
+
+
+    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const currentForm = form.current;
+        const formData = new FormData(e.currentTarget);
+
+        // Validar los campos del formulario
+        const name = formData.get('user_name') as string;
+        const email = formData.get('user_email') as string;
+        const message = formData.get('user_message') as string;
+
+        // Validación del formato de correo electrónico 
+        const isValidEmail = (email: string) => {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        };
+
+        // Mostrar mensaje de error si hay campos vacíos
+        if (!name || !email || !message) {
+            toast.error('Por favor completa todos los campos.');
+            return;
+        }
+
+        // Mostrar mensaje de error si el formato del correo electrónico es inválido
+        if (!isValidEmail(email)) {
+            toast.error('Por favor ingresa un correo electrónico válido.');
+            return;
+        }
 
         if (currentForm == null) return;
 
@@ -32,6 +62,7 @@ const Contact: FC = () => {
                 () => {
                     console.log('Enviado!');
                     toast.success('Mensaje enviado con éxito! ');
+                    currentForm.reset();
                 },
                 (error) => {
                     console.log('Fallo...', error.text);
@@ -95,12 +126,18 @@ const Contact: FC = () => {
 
             {/* Mobile Version */}
 
-            <section id="contact" className="px-4 w-full lg:max-w-screen-lg lg:mx-auto flex flex-col gap-1 mb-10 lg:hidden">
+            <motion.section
+                id="contact"
+                className="px-4 w-full lg:max-w-screen-lg lg:mx-auto flex flex-col gap-1 mb-10 lg:hidden"
+                whileInView={{ opacity: 1 }}
+                initial={{ opacity: 0 }}
+                transition={{ duration: 1, delay: 0.5 }}
+            >
                 <div className='flex flex-col gap-1 mb-8'>
                     <h2 className='text-4xl lg:text-5xl font-bold'>Contacto</h2>
                 </div>
 
-                <form className="flex flex-col ">
+                <form ref={form} onSubmit={sendEmail} className="flex flex-col">
 
                     {/* Name */}
                     <div className="flex w-full flex-col gap-1 mb-2">
@@ -139,10 +176,10 @@ const Contact: FC = () => {
                     </div>
 
                     <div className="mt-10 text-end">
-                        <button onClick={sendEmail} className="form-button font-extrabold text-sm px-6 py-3 rounded-full ">Enviar Mensaje</button>
+                        <button className="form-button font-extrabold text-sm px-6 py-3 rounded-full ">Enviar Mensaje</button>
                     </div>
                 </form>
-            </section>
+            </motion.section>
             <Toaster position="top-right" richColors />
         </>
     )
