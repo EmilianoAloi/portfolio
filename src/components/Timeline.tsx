@@ -40,8 +40,10 @@ const Timeline: FC = () => {
         <p>
           Desarrollo y optimización de proyectos web para Astrazeneca en
           diferentes entornos como React y AEM (Adobe Expirience Manager).
-          <br /> <br />- Participé en reuniones diarias para la planificación y
-          el seguimiento de tareas.{" "}
+          <br /> <br />
+          - Integro el equipo Frontend junto a 7 desarrolladores.
+          <br /> <br />- Participo en reuniones diarias para la planificación y
+          el seguimiento de tareas.
         </p>
       </VerticalTimelineElement>
 
@@ -79,7 +81,7 @@ const Timeline: FC = () => {
           - Aprendí a trabajar en un entorno de desarrollo colaborativo
           utilizando Git y Github. <br />
           <br />- Participé en reuniones diarias para la planificación y el
-          seguimiento de tareas.{" "}
+          seguimiento de tareas.
         </p>
         {/* <div className="rounded-md overflow-hidden pt-8">
                     <iframe src="https://drive.google.com/file/d/1yBBfMYJRdY21RpHiwFGzFLX3ybp6r8GQ/preview" width="100%" height="200" allow="autoplay"></iframe>
